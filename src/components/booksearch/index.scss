@@ -1,0 +1,15 @@
+.booksearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #title {
+        display: flex;
+        margin: 5px;
+    }
+
+    #author {
+        display: flex;
+        margin: 5px;
+    }
+}
