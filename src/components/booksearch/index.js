@@ -10,8 +10,7 @@ class BookSearch extends Component {
     this.state = {
       title: "",
       author: "",
-      data: {},
-      showData: false,
+      data: {}
     };
     this.onInputchange = this.onInputchange.bind(this);
     this.onSubmitForm = this.onSubmitForm.bind(this);
