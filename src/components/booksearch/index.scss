@@ -1,15 +1,29 @@
-.booksearch {
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .booksearch {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 200px;
+    margin-bottom: 25px;
 
     #title {
-        display: flex;
-        margin: 5px;
+      display: flex;
+      margin: 5px;
     }
 
     #author {
-        display: flex;
-        margin: 5px;
+      display: flex;
+      margin: 5px;
     }
+  }
+
+  .bookdisplay {
+    display: flex;
+    margin-top: 25px;
+  }
 }
