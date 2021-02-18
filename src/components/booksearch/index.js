@@ -10,7 +10,8 @@ class BookSearch extends Component {
     this.state = {
       title: "",
       author: "",
-      data: {}
+      data: {},
+      showData: false,
     };
     this.onInputchange = this.onInputchange.bind(this);
     this.onSubmitForm = this.onSubmitForm.bind(this);
@@ -31,6 +32,7 @@ class BookSearch extends Component {
       .then((response) => {
         this.setState({
           data: response.data,
+          showData: true,
         });
         console.log(response.data);
       })
@@ -40,6 +42,7 @@ class BookSearch extends Component {
   }
 
   render() {
+    const { showData } = this.state;
     return (
       <div className="book">
         <div className="booksearch">
@@ -61,11 +64,15 @@ class BookSearch extends Component {
           ></input>
           <Button text="Search" onClick={this.onSubmitForm}></Button>
         </div>
-        <div className="bookdisplay">
+        <div
+          className="bookdisplay"
+          style={{ display: showData ? "flex" : "none" }}
+        >
           <Bookdisplay
             title={this.state.data.title}
             authors={this.state.data.authors}
             publishDate={this.state.data.publishedDate}
+            rating={this.state.data.averageRating}
             description={this.state.data.description}
           ></Bookdisplay>
         </div>

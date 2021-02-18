@@ -6,12 +6,35 @@
   width: 91%;
   margin: auto;
 
+  .columns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .titleauthor {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      text-align: left;
+      width: 50%;
+    }
+
+    .daterating {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      text-align: right;
+      width: 50%;
+    }
+  }
+
   .description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     height: 3.6em;
     line-height: 1.2em;
+    text-align: center;
     overflow: hidden;
     // text-overflow: ellipsis;
   }
