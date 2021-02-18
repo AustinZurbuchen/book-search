@@ -73,6 +73,7 @@ class BookSearch extends Component {
             authors={this.state.data.authors}
             publishDate={this.state.data.publishedDate}
             rating={this.state.data.averageRating}
+            link={this.state.data.infoLink}
             description={this.state.data.description}
           ></Bookdisplay>
         </div>

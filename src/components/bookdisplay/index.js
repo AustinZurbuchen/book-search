@@ -1,12 +1,21 @@
 import React from "react";
 import "./index.scss";
 
-const Bookdisplay = ({ title, authors, description, publishDate, rating }) => {
+const Bookdisplay = ({
+  title,
+  authors,
+  description,
+  publishDate,
+  rating,
+  link,
+}) => {
   return (
     <div className="bookdisplay">
       <div className="columns">
         <div className="titleauthor column">
-          <div className="title">{title}</div>
+          <a className="title" href={link}>
+            {title}
+          </a>
           <div className="authors">{authors}</div>
         </div>
         <div className="daterating column">
